@@ -11,7 +11,6 @@ docker-ce
 docker-ce-cli
 docker-compose
 docker-compose-plugin
-exa
 fd-find
 file-roller
 flameshot
@@ -21,11 +20,7 @@ g++
 gcc
 gdu
 gettext
-gimp
-gir1.2-gda-5.0
-gir1.2-gsound-1.0
 git
-gnome-shell-extension-manager
 golang
 jq
 kitty
@@ -45,12 +40,9 @@ python3-virtualenv
 ripgrep
 sassc
 spotify-client
-sqlite
 tidy
-timeshift
 ttf-mscorefonts-installer
 unzip
-vlc
 xclip
 zram-tools
 zsh
