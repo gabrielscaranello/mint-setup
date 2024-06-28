@@ -7,6 +7,6 @@ PACKAGES=$(cat "$PWD/system-packages" | tr '\n' ' ')
 
 echo "Installing native packages..."
 install_nala
-sudo nala upgrade -y
-sudo nala install -y $PACKAGES
+sudo apt upgrade -y
+sudo apt install -y $PACKAGES
 echo "native packages installed."

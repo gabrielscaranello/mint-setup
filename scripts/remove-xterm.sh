@@ -6,6 +6,6 @@ PWD=$(pwd)
 
 echo "Removing xterm..."
 install_nala
-sudo nala purge -y xterm*
-sudo nala autoremove
+sudo apt purge -y xterm*
+sudo apt autoremove
 echo "xterm removed."
