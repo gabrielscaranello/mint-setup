@@ -1,286 +1,432 @@
-[org/gnome/desktop/app-folders]
-folder-children=['Utilities', 'YaST']
+[com/linuxmint/updates]
+default-repo-is-ok=true
+hide-kernel-update-warning=true
+show-welcome-page=false
+window-height=570
+window-pane-position=344
+window-width=790
 
-[org/gnome/desktop/app-folders/folders/Utilities]
-apps=['yelp.desktop', 'org.gnome.baobab.desktop', 'gnome-session-properties.desktop', 'update-manager.desktop', 'com.zorin.desktop.upgrader.desktop', 'gufw.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.PowerStats.desktop', 'org.flameshot.Flameshot.desktop', 'org.gnome.FileRoller.desktop', 'com.mattjakeman.ExtensionManager.desktop', 'alacarte.desktop', 'org.gnome.Weather.desktop', 'gnome-system-monitor.desktop', 'nvidia-settings.desktop', 'software-properties-gtk.desktop', 'gnome-language-selector.desktop', 'install-zorin-windows-app-support.desktop', 'org.gnome.Evince.desktop', 'org.gnome.eog.desktop', 'zorin-appearance.desktop', 'zorin-connect.desktop', 'org.gnome.Logs.desktop', 'org.gnome.font-viewer.desktop']
-categories=['X-GNOME-Utilities']
-name='X-GNOME-Utilities.directory'
-translate=true
+[org/blueman/plugins/powermanager]
+auto-power-on=@mb false
+
+[org/cinnamon]
+alttab-switcher-delay=150
+alttab-switcher-enforce-primary-monitor=true
+alttab-switcher-show-all-workspaces=true
+alttab-switcher-style='coverflow'
+alttab-switcher-warp-mouse-pointer=false
+desklet-snap-interval=25
+device-aliases=['/org/freedesktop/UPower/devices/battery_BAT1:=Laptop']
+enabled-applets=['panel1:left:0:menu@cinnamon.org:0', 'panel1:right:7:systray@cinnamon.org:3', 'panel1:right:3:xapp-status@cinnamon.org:4', 'panel1:right:9:notifications@cinnamon.org:5', 'panel1:right:10:printers@cinnamon.org:6', 'panel1:right:11:removable-drives@cinnamon.org:7', 'panel1:right:12:keyboard@cinnamon.org:8', 'panel1:right:13:favorites@cinnamon.org:9', 'panel1:right:14:network@cinnamon.org:10', 'panel1:right:15:sound@cinnamon.org:11', 'panel1:right:16:power@cinnamon.org:12', 'panel1:right:17:calendar@cinnamon.org:13', 'panel1:right:18:cornerbar@cinnamon.org:14', 'panel1:right:5:qredshift@quintao:16', 'panel1:right:4:inhibit@cinnamon.org:17', 'panel1:left:1:separator@cinnamon.org:18', 'panel1:left:2:grouped-window-list@cinnamon.org:19', 'panel1:right:0:color-picker@fmete:21']
+enabled-desklets=@as []
+enabled-extensions=@as []
+favorite-apps=['cinnamon-settings.desktop', 'mintinstall.desktop']
+hotcorner-layout=['expo:true:0', 'scale:false:0', 'scale:true:0', 'desktop:false:0']
+next-applet-id=22
+next-desklet-id=3
+no-adjacent-panel-barriers=false
+panel-edit-mode=false
+panel-zone-icon-sizes='[{"panelId": 1, "left": 24, "center": 0, "right": 22}]'
+panel-zone-symbolic-icon-sizes='[{"panelId": 1, "left": 28, "center": 28, "right": 16}]'
+panel-zone-text-sizes='[{"panelId":1,"left":9.5,"center":10,"right":10}]'
+panels-autohide=['1:false', '2:true']
+panels-enabled=['1:0:bottom']
+panels-height=['1:36']
+panels-hide-delay=['1:0', '2:0']
+panels-show-delay=['1:0', '2:0']
+show-media-keys-osd='medium'
+window-effect-speed=1
+workspace-expo-view-as-grid=true
+workspace-osd-visible=true
+
+[org/cinnamon/cinnamon-session]
+quit-delay-toggle=true
+quit-time-delay=60
+
+[org/cinnamon/desktop/a11y/keyboard]
+bouncekeys-delay=300
+mousekeys-accel-time=300
+mousekeys-init-delay=300
+mousekeys-max-speed=10
+slowkeys-delay=300
+
+[org/cinnamon/desktop/a11y/mouse]
+dwell-threshold=10
+dwell-time=1.2
+secondary-click-time=1.2
+
+[org/cinnamon/desktop/applications/calculator]
+exec='gnome-calculator'
+
+[org/cinnamon/desktop/applications/terminal]
+exec='kitty'
+exec-arg='--'
+
+[org/cinnamon/desktop/background]
+picture-uri='file:///usr/share/backgrounds/user/default.png'
+
+[org/cinnamon/desktop/interface]
+clock-show-date=false
+clock-show-seconds=false
+cursor-blink-time=1200
+cursor-size=20
+cursor-theme='Bibata-Modern-Ice'
+first-day-of-week=7
+font-name='Ubuntu 10'
+gtk-enable-primary-paste=false
+gtk-theme='Colloid-Dark-Catppuccin'
+icon-theme='Papirus-Dark'
+keyboard-layout-prefer-variant-names=false
+keyboard-layout-show-flags=false
+keyboard-layout-use-upper=true
+text-scaling-factor=1.0
+toolkit-accessibility=true
+
+[org/cinnamon/desktop/keybindings]
+custom-list=['__dummy__', 'custom0']
+looking-glass-keybinding=@as []
+
+[org/cinnamon/desktop/keybindings/custom-keybindings/custom0]
+binding=['<Primary><Super>s', '<Shift><Super>s', 'Print']
+command='flameshot gui'
+name='flameshot'
+
+[org/cinnamon/desktop/keybindings/media-keys]
+screensaver=['<Control><Alt>l', '<Super>l']
+screenshot=@as []
+
+[org/cinnamon/desktop/keybindings/wm]
+maximize=@as []
+move-to-workspace-left=['<Control><Shift><Alt>Left', '<Shift><Super>Page_Up']
+move-to-workspace-right=['<Control><Shift><Alt>Right', '<Shift><Super>Page_Down']
+switch-to-workspace-left=['<Control><Alt>Left', '<Super>Page_Up']
+switch-to-workspace-right=['<Control><Alt>Right', '<Super>Page_Down']
+toggle-maximized=['<Alt>F10', '<Super>m']
+
+[org/cinnamon/desktop/media-handling]
+autorun-never=false
+autorun-x-content-ignore=@as []
+autorun-x-content-open-folder=@as []
+autorun-x-content-start-app=@as []
+
+[org/cinnamon/desktop/notifications]
+bottom-notifications=true
+display-notifications=true
+notification-duration=5
+remove-old=true
+
+[org/cinnamon/desktop/peripherals/keyboard]
+delay=uint32 500
+numlock-state=true
+repeat-interval=uint32 30
+
+[org/cinnamon/desktop/peripherals/mouse]
+accel-profile='flat'
+double-click=400
+drag-threshold=8
+speed=0.0
+
+[org/cinnamon/desktop/peripherals/touchpad]
+speed=0.0
+
+[org/cinnamon/desktop/privacy]
+remember-recent-files=false
+
+[org/cinnamon/desktop/screensaver]
+date-format='%A,%e %B'
+default-message=''
+font-date='Roboto 24'
+font-message='Roboto 14'
+font-time='Roboto 64'
+layout-group=0
+time-format='%H:%M:%S'
+use-custom-format=true
+
+[org/cinnamon/desktop/sound]
+event-sounds=false
+volume-sound-enabled=false
+
+[org/cinnamon/desktop/wm/preferences]
+action-middle-click-titlebar='minimize'
+button-layout=':close'
+min-window-opacity=30
+mouse-button-modifier='<Super>'
+theme='Colloid-Dark-Catppuccin'
+titlebar-font='Ubuntu Bold 10'
+visual-bell=false
+
+[org/cinnamon/gestures]
+enabled=true
+pinch-percent-threshold=uint32 40
+swipe-down-2='PUSH_TILE_DOWN::end'
+swipe-down-3='TOGGLE_OVERVIEW::end'
+swipe-down-4='VOLUME_DOWN::end'
+swipe-left-2='PUSH_TILE_LEFT::end'
+swipe-left-3='WORKSPACE_NEXT::end'
+swipe-left-4='WINDOW_WORKSPACE_PREVIOUS::end'
+swipe-percent-threshold=uint32 60
+swipe-right-2='PUSH_TILE_RIGHT::end'
+swipe-right-3='WORKSPACE_PREVIOUS::end'
+swipe-right-4='WINDOW_WORKSPACE_NEXT::end'
+swipe-up-2='PUSH_TILE_UP::end'
+swipe-up-3='TOGGLE_EXPO::end'
+swipe-up-4='VOLUME_UP::end'
+tap-3='MEDIA_PLAY_PAUSE::end'
+
+[org/cinnamon/launcher]
+check-frequency=300
+memory-limit=2048
+
+[org/cinnamon/muffin]
+attach-modal-dialogs=true
+draggable-border-width=10
+placement-mode='center'
+tile-maximize=true
+unredirect-fullscreen-windows=true
+workspace-cycle=false
+workspaces-only-on-primary=true
+
+[org/cinnamon/settings-daemon/peripherals/keyboard]
+numlock-state='on'
+
+[org/cinnamon/settings-daemon/plugins/power]
+lid-close-ac-action='suspend'
+lid-close-battery-action='suspend'
+sleep-display-ac=1800
+sleep-display-battery=1800
+sleep-inactive-ac-timeout=0
+sleep-inactive-battery-timeout=0
+
+[org/cinnamon/settings-daemon/plugins/xsettings]
+menus-have-icons=true
+
+[org/cinnamon/sounds]
+login-enabled=false
+logout-enabled=false
+notification-enabled=false
+plug-enabled=false
+switch-enabled=false
+tile-enabled=false
+unplug-enabled=false
+
+[org/cinnamon/theme]
+name='Colloid-Dark-Catppuccin'
+
+[org/gnome/calculator]
+accuracy=9
+angle-units='degrees'
+base=10
+button-mode='basic'
+number-format='automatic'
+show-thousands=false
+show-zeroes=false
+source-currency=''
+source-units='degree'
+target-currency=''
+target-units='radian'
+window-maximized=false
+window-size=(360, 506)
+word-size=64
+
+[org/gnome/desktop/a11y]
+always-show-text-caret=false
+
+[org/gnome/desktop/a11y/applications]
+screen-keyboard-enabled=false
+screen-reader-enabled=false
+
+[org/gnome/desktop/a11y/mouse]
+dwell-click-enabled=false
+dwell-threshold=10
+dwell-time=1.2
+secondary-click-enabled=false
+secondary-click-time=1.2
+
+[org/gnome/desktop/background]
+picture-uri='file:///usr/share/backgrounds/user/default.png'
 
 [org/gnome/desktop/input-sources]
-mru-sources=[('xkb', 'us+intl'), ('xkb', 'br')]
-per-window=false
-sources=[('xkb', 'us+intl'), ('xkb', 'br')]
+current=uint32 0
+show-all-sources=false
+sources=@a(ss) []
 xkb-options=@as []
 
 [org/gnome/desktop/interface]
-clock-show-seconds=true
-clock-show-weekday=true
-color-scheme='prefer-dark'
-document-font-name='Roboto 10'
-enable-hot-corners=true
-font-antialiasing='grayscale'
-font-hinting='slight'
-font-name='Roboto 10'
-show-battery-percentage=true
+can-change-accels=false
+clock-format='24h'
+clock-show-date=false
+clock-show-seconds=false
+cursor-blink=true
+cursor-blink-time=1200
+cursor-blink-timeout=10
+cursor-size=20
+cursor-theme='Bibata-Modern-Ice'
+document-font-name='Noto Sans 11'
+enable-animations=true
+font-name='Ubuntu 10'
+gtk-color-palette='black:white:gray50:red:purple:blue:light blue:green:yellow:orange:lavender:brown:goldenrod4:dodger blue:pink:light green:gray10:gray30:gray75:gray90'
+gtk-color-scheme=''
+gtk-enable-primary-paste=false
+gtk-im-module=''
+gtk-im-preedit-style='callback'
+gtk-im-status-style='callback'
+gtk-key-theme='Default'
+gtk-theme='Colloid-Dark-Catppuccin'
+gtk-timeout-initial=200
+gtk-timeout-repeat=20
+icon-theme='Papirus-Dark'
+menubar-accel='F10'
+menubar-detachable=false
+menus-have-tearoff=false
+monospace-font-name='JetBrainsMono Nerd Font 10'
+scaling-factor=uint32 0
 text-scaling-factor=1.0
+toolbar-detachable=false
+toolbar-icons-size='large'
+toolbar-style='both-horiz'
+toolkit-accessibility=true
 
 [org/gnome/desktop/peripherals/mouse]
 accel-profile='flat'
-
-[org/gnome/desktop/peripherals/touchpad]
-tap-to-click=true
-two-finger-scrolling-enabled=true
+double-click=400
+drag-threshold=8
+left-handed=false
+middle-click-emulation=false
+natural-scroll=false
+speed=0.0
 
 [org/gnome/desktop/privacy]
+disable-camera=false
+disable-microphone=false
+disable-sound-output=false
 old-files-age=uint32 30
-recent-files-max-age=30
+recent-files-max-age=7
 remember-recent-files=false
-remove-old-temp-files=true
-remove-old-trash-files=true
+remove-old-temp-files=false
+remove-old-trash-files=false
+
+[org/gnome/desktop/sound]
+event-sounds=false
+input-feedback-sounds=false
+theme-name='LinuxMint'
 
 [org/gnome/desktop/wm/preferences]
+action-double-click-titlebar='toggle-maximize'
 action-middle-click-titlebar='minimize'
-button-layout='appmenu:close'
-titlebar-font='Roboto Bold 10'
+action-right-click-titlebar='menu'
+audible-bell=false
+auto-raise=false
+auto-raise-delay=500
+button-layout=':close'
+disable-workarounds=false
+focus-mode='click'
+focus-new-windows='smart'
+mouse-button-modifier='<Super>'
+num-workspaces=4
+raise-on-click=true
+resize-with-right-button=true
+theme='Colloid-Dark-Catppuccin'
+titlebar-font='Ubuntu Bold 10'
+titlebar-uses-system-font=false
+visual-bell=false
+visual-bell-type='fullscreen-flash'
+workspace-names=@as []
 
-[org/gnome/eog/view]
-background-color='rgb(0,0,0)'
-use-background-color=true
+[org/gnome/evolution-data-server]
+migrated=true
+network-monitor-gio-name=''
 
-[org/gnome/gedit/plugins]
-active-plugins=['filebrowser', 'spell', 'sort', 'docinfo', 'modelines', 'openlinks']
+[org/gnome/file-roller/dialogs/extract]
+recreate-folders=true
+skip-newer=false
 
-[org/gnome/mutter]
-center-new-windows=true
-edge-tiling=false
-overlay-key='Super_L'
+[org/gnome/gnome-system-monitor]
+maximized=false
+network-total-in-bits=false
+show-dependencies=false
+show-whose-processes='user'
 
-[org/gnome/mutter/keybindings]
-toggle-tiled-left=@as []
-toggle-tiled-right=@as []
+[org/gnome/gnome-system-monitor/disktreenew]
+col-6-visible=true
 
-[org/gnome/nautilus/preferences]
-click-policy='double'
-default-folder-viewer='icon-view'
-search-filter-time-type='last_modified'
-search-view='list-view'
+[org/gnome/libgnomekbd/desktop]
+group-per-window=false
+load-extra-items=false
 
-[org/gnome/settings-daemon/plugins/color]
-night-light-enabled=true
-night-light-schedule-automatic=false
-night-light-schedule-from=4.0
-night-light-schedule-to=3.9833333333333334
-night-light-temperature=uint32 4700
+[org/gnome/libgnomekbd/keyboard]
+layouts=['us\tintl', 'br']
 
-[org/gnome/settings-daemon/plugins/media-keys]
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
+[org/gnome/nm-applet]
+disable-connected-notifications=true
+disable-disconnected-notifications=true
 
-[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
-binding='Print'
-command='flameshot gui'
-name='Flameshot'
+[org/gnome/nm-applet/eap/02df5fd8-1749-4796-9e45-eaee0dd05c03]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
 
-[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
-binding='<Primary><Super>s'
-command='flameshot gui'
-name='Flameshot'
+[org/gnome/nm-applet/eap/0cb0bfc3-3b6b-358e-bf51-7db524960a84]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
+[org/gnome/nm-applet/eap/188a180d-5019-39b8-b941-7b2167dc87c6]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
+[org/gnome/nm-applet/eap/ee00fb5b-ccd7-3b85-ae45-953f416c12eb]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/xsettings]
-overrides={'Gtk/ShellShowsAppMenu': <1>}
+disabled-gtk-modules=@as []
+enabled-gtk-modules=@as []
+overrides=@a{sv} {}
 
-[org/gnome/shell]
-app-picker-layout=[{'org.gnome.Calculator.desktop': <{'position': <0>}>, 'org.gnome.Calendar.desktop': <{'position': <1>}>, 'gnome-control-center.desktop': <{'position': <2>}>, 'org.gnome.Contacts.desktop': <{'position': <3>}>, 'org.gnome.gedit.desktop': <{'position': <4>}>, 'org.freedesktop.Piper.desktop': <{'position': <5>}>, 'org.gnome.Software.desktop': <{'position': <6>}>, 'org.gnome.clocks.desktop': <{'position': <7>}>, 'vlc.desktop': <{'position': <8>}>, 'timeshift-gtk.desktop': <{'position': <9>}>, 'code.desktop': <{'position': <10>}>, 'Utilities': <{'position': <11>}>}]
-disable-user-extensions=false
-disabled-extensions=['apps-menu@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'zorin-menu@zorinos.com', 'zorin-taskbar@zorinos.com', 'zorin-desktop-icons@zorinos.com', 'zorin-spatial-window-switcher@zorinos.com']
-enabled-extensions=['drive-menu@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'x11gestures@joseexposito.github.io', 'zorin-appindicator@zorinos.com', 'zorin-printers@zorinos.com', 'zorin-tiling-assistant@zorinos.com', 'blur-my-shell@aunetx', 'caffeine@patapon.info', 'color-picker@tuberry', 'emoji-copy@felipeftn', 'CoverflowAltTab@palatis.blogspot.com', 'zorin-magic-lamp-effect@zorinos.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'pano@elhan.io', 'replaceActivitiesText@pratap.fastmail.fm', 'top-bar-organizer@julian.gse.jsts.xyz', 'Vitals@CoreCoding.com', 'wireless-hid@chlumskyvaclav.gmail.com', 'focus-follows-workspace@christopher.luebbemeier.gmail.com']
-favorite-apps=['org.gnome.Nautilus.desktop', 'kitty.desktop', 'firefox.desktop', 'google-chrome.desktop', 'dbeaver-ce.desktop', 'onlyoffice-desktopeditors.desktop', 'gimp.desktop', 'obsidian.desktop', 'spotify.desktop', 'discord.desktop']
+[org/gtk/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
+show-hidden=false
+show-size-column=true
+show-type-column=true
+sidebar-width=171
+sort-column='name'
+sort-directories-first=false
+sort-order='ascending'
+type-format='category'
+window-size=(1203, 902)
 
-[org/gnome/shell/extensions/blur-my-shell/appfolder]
-blur=true
-style-dialogs=2
+[org/nemo/desktop]
+desktop-layout='false::false'
+font='Ubuntu 10'
+show-orphaned-desktop-icons=false
+volumes-visible=false
 
-[org/gnome/shell/extensions/blur-my-shell/applications]
-blur=false
+[org/nemo/window-state]
+maximized=false
+sidebar-bookmark-breakpoint=5
+start-with-sidebar=true
 
-[org/gnome/shell/extensions/blur-my-shell/lockscreen]
-blur=true
+[org/x/apps/portal]
+color-scheme='prefer-dark'
 
-[org/gnome/shell/extensions/blur-my-shell/overview]
-blur=true
-style-components=1
+[org/x/editor/plugins]
+active-plugins=['docinfo', 'modelines', 'bracketcompletion', 'joinlines', 'filebrowser', 'sort', 'spell', 'time', 'open-uri-context-menu', 'textsize']
 
-[org/gnome/shell/extensions/blur-my-shell/panel]
-blur=true
-unblur-in-overview=true
+[org/x/editor/plugins/filebrowser/on-load]
+root='file:///'
+tree-view=true
 
-[org/gnome/shell/extensions/blur-my-shell/screenshot]
-blur=true
+[org/x/editor/preferences/ui]
+statusbar-visible=true
 
-[org/gnome/shell/extensions/caffeine]
-duration-timer=2
-indicator-position-max=1
-restore-state=true
-show-indicator='only-active'
-toggle-state=true
-user-enabled=true
+[org/x/editor/state/window]
+bottom-panel-size=140
+side-panel-active-page=1541982214
+side-panel-size=200
+size=(650, 500)
+state=43908
 
-[org/gnome/shell/extensions/color-picker]
-enable-shortcut=false
-notify-style=uint32 0
-preview-style=uint32 1
-
-[org/gnome/shell/extensions/coverflowalttab]
-animation-time=0.25
-dim-factor=0.5
-easing-function='ease-in-out-circ'
-hide-panel=false
-highlight-mouse-over=false
-icon-style='Overlay'
-offset=0
-overlay-icon-size=128.0
-perspective-correction-method='Move Camera'
-position='Bottom'
-preview-to-monitor-ratio=0.90000000000000002
-switcher-looping-method='Flip Stack'
-switcher-style='Coverflow'
-
-[org/gnome/shell/extensions/pano]
-active-item-border-color='rgb(137,180,250)'
-hovered-item-border-color='rgb(137,180,250)'
-incognito-window-background-color='rgba(7,7,33,0.92)'
-is-in-incognito=false
-keep-search-entry=false
-open-links-in-browser=false
-paste-on-select=false
-play-audio-on-copy=false
-send-notification-on-copy=false
-show-indicator=false
-window-background-color='rgba(17,17,27,0.92)'
-window-height=400
-
-[org/gnome/shell/extensions/pano/code-item]
-body-bg-color='rgb(30,30,46)'
-body-font-family='JetBrainsMono Nerd Font'
-body-font-size=13
-char-length=600
-header-bg-color='rgb(203,166,247)'
-
-[org/gnome/shell/extensions/pano/color-item]
-header-bg-color='rgb(203,166,247)'
-metadata-font-family='Roboto'
-metadata-font-size=16
-
-[org/gnome/shell/extensions/pano/emoji-item]
-body-bg-color='rgb(249,226,175)'
-header-bg-color='rgb(243,139,168)'
-header-color='rgb(255,255,255)'
-
-[org/gnome/shell/extensions/pano/file-item]
-body-bg-color='rgb(30,30,46)'
-body-color='rgb(250,250,250)'
-body-font-family='Roboto'
-body-font-size=13
-header-bg-color='rgb(116,199,236)'
-
-[org/gnome/shell/extensions/pano/image-item]
-body-bg-color='rgb(69,71,90)'
-header-bg-color='rgb(243,139,168)'
-metadata-bg-color='rgba(30,30,46,0.79)'
-metadata-font-family='Roboto'
-metadata-font-size=12
-
-[org/gnome/shell/extensions/pano/link-item]
-body-bg-color='rgb(116,199,236)'
-header-bg-color='rgb(137,180,250)'
-header-color='rgb(255,255,255)'
-metadata-bg-color='rgb(30,30,46)'
-metadata-description-font-family='Roboto'
-metadata-description-font-size=11
-metadata-link-font-family='Roboto'
-metadata-link-font-size=11
-metadata-title-color='rgb(255,255,255)'
-metadata-title-font-family='Roboto'
-metadata-title-font-size=12
-
-[org/gnome/shell/extensions/pano/text-item]
-body-bg-color='rgb(30,30,46)'
-body-color='rgb(205,214,244)'
-body-font-family='Roboto'
-body-font-size=14
-header-bg-color='rgb(137,180,250)'
-header-color='rgb(255,255,255)'
-
-[org/gnome/shell/extensions/replaceActivitiesText]
-icon-path=''
-icon-size=1.5
-right-click=false
-text='Atividades'
-
-[org/gnome/shell/extensions/top-bar-organizer]
-center-box-order=['dateMenu']
-left-box-order=['activities-icon-button', 'activities', 'vitalsMenu', 'appMenu']
-right-box-order=['appindicator-kstatusnotifieritem-chrome_status_icon_1', 'wireless-hid', 'EmojisMenu', 'color-picker@tuberry', 'zorin-tiling-assistant@zorinos.com', 'printers', 'appindicator-kstatusnotifieritem-software-update-available', 'drive-menu', 'screenRecording', 'screenSharing', 'dwellClick', 'a11y', 'keyboard', 'quickSettings']
-
-[org/gnome/shell/extensions/user-theme]
-name='Catppuccin-Mocha-Standard-Blue-Dark'
-
-[org/gnome/shell/extensions/vitals]
-alphabetize=true
-fixed-widths=true
-hide-icons=false
-hot-sensors=['_memory_usage_', '_processor_usage_', '__temperature_max__']
-position-in-panel=0
-show-storage=false
-show-system=false
-update-time=2
-
-[org/gnome/shell/extensions/zorin-taskbar]
-available-monitors=[0]
-
-[org/gnome/shell/extensions/zorin-tiling-assistant]
-activate-layout0=@as []
-activate-layout1=@as []
-activate-layout2=@as []
-activate-layout3=@as []
-active-window-hint=1
-active-window-hint-color='rgb(137,180,250)'
-auto-tile=@as []
-center-window=@as []
-debugging-free-rects=@as []
-debugging-show-tiled-rects=@as []
-default-move-mode=0
-dynamic-keybinding-behavior=1
-import-layout-examples=false
-last-version-installed=43
-maximize-with-gap=false
-monitor-switch-grace-period=true
-overridden-settings={'org.gnome.mutter.edge-tiling': <@mb nothing>, 'org.gnome.desktop.wm.keybindings.maximize': <@mb nothing>, 'org.gnome.desktop.wm.keybindings.unmaximize': <@mb nothing>, 'org.gnome.mutter.keybindings.toggle-tiled-left': <@mb nothing>, 'org.gnome.mutter.keybindings.toggle-tiled-right': <@mb nothing>}
-restore-window=['<Super>Down']
-search-popup-layout=@as []
-single-screen-gap=4
-tile-bottom-half=['<Super>KP_2']
-tile-bottom-half-ignore-ta=@as []
-tile-bottomleft-quarter=['<Super>KP_1']
-tile-bottomleft-quarter-ignore-ta=@as []
-tile-bottomright-quarter=['<Super>KP_3']
-tile-bottomright-quarter-ignore-ta=@as []
-tile-edit-mode=@as []
-tile-left-half=['<Super>Left', '<Super>KP_4']
-tile-left-half-ignore-ta=@as []
-tile-maximize=['<Super>Up', '<Super>KP_5']
-tile-maximize-horizontally=@as []
-tile-maximize-vertically=@as []
-tile-right-half=['<Super>Right', '<Super>KP_6']
-tile-right-half-ignore-ta=@as []
-tile-top-half=['<Super>KP_8']
-tile-top-half-ignore-ta=@as []
-tile-topleft-quarter=['<Super>KP_7']
-tile-topleft-quarter-ignore-ta=@as []
-tile-topright-quarter=['<Super>KP_9']
-tile-topright-quarter-ignore-ta=@as []
-tiling-popup-all-workspace=true
-toggle-always-on-top=@as []
-toggle-tiling-popup=@as []
-window-gap=4
-
+[org/x/warpinator/preferences]
+ask-for-send-permission=true
+autostart=false
+connect-id='MINTOS-938143C175C6840B3322'
+no-overwrite=true

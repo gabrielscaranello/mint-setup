@@ -18,17 +18,6 @@ _add_docker_repo() {
 	echo "Docker repo added."
 }
 
-_add_golang_repo() {
-	echo "Adding Golang repo..."
-	echo "Removing old files if exists..."
-	sudo add-apt-repository -r -y ppa:longsleep/golang-backports
-
-	echo "Adding Golang repo..."
-	sudo add-apt-repository -y ppa:longsleep/golang-backports
-
-	echo "Golang repo added."
-}
-
 _add_onlyoffice_repo() {
 	echo "Adding OnlyOffice repo..."
 	echo "Removing old files if exists..."
@@ -83,7 +72,6 @@ _add_vscode_repo() {
 
 echo "Adding missing deb repos..."
 _add_docker_repo
-_add_golang_repo
 _add_onlyoffice_repo
 _add_papirus_repo
 _add_spotify_repo
