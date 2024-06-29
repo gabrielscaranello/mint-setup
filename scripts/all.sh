@@ -15,6 +15,7 @@ bash $PWD/scripts/install-bottom.sh
 bash $PWD/scripts/install-dbeaver.sh
 bash $PWD/scripts/install-discord.sh
 bash $PWD/scripts/install-gitflow-cjs.sh
+bash $PWD/scripts/install-go.sh
 bash $PWD/scripts/install-google-chrome.sh
 bash $PWD/scripts/install-jetbrains-mono.sh
 bash $PWD/scripts/install-lazydocker.sh
