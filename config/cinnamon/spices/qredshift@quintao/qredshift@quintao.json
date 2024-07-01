@@ -1,43 +1,26 @@
 {
   "layout": {
     "type": "layout",
-    "pages": [
-      "panel-options",
-      "panel-location",
-      "panel-shortcuts"
-    ],
+    "pages": ["panel-options", "panel-location", "panel-shortcuts"],
     "panel-options": {
       "type": "page",
       "title": "Settings",
-      "sections": [
-        "opt-section",
-        "day-section",
-        "night-section"
-      ]
+      "sections": ["opt-section", "day-section", "night-section"]
     },
     "panel-location": {
       "type": "page",
       "title": "Location",
-      "sections": [
-        "location-section"
-      ]
+      "sections": ["location-section"]
     },
     "panel-shortcuts": {
       "type": "page",
       "title": "Shortcuts",
-      "sections": [
-        "keybind-section",
-        "info-section"
-      ]
+      "sections": ["keybind-section", "info-section"]
     },
     "info-section": {
       "type": "section",
       "title": "Tips",
-      "keys": [
-        "textTips",
-        "textHelp",
-        "textInfo"
-      ]
+      "keys": ["textTips", "textHelp", "textInfo"]
     },
     "opt-section": {
       "type": "section",
@@ -56,11 +39,7 @@
     "day-section": {
       "type": "section",
       "title": "Day Settings",
-      "keys": [
-        "dayTemp",
-        "dayBrightness",
-        "gammaMix"
-      ]
+      "keys": ["dayTemp", "dayBrightness", "gammaMix"]
     },
     "night-section": {
       "type": "section",
@@ -224,7 +203,7 @@
     "units": "K",
     "step": 5,
     "description": "Temperature",
-    "value": 4700.0
+    "value": 4700
   },
   "dayBrightness": {
     "type": "spinbutton",

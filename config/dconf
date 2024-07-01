@@ -65,6 +65,10 @@ exec-arg='--'
 [org/cinnamon/desktop/background]
 picture-uri='file:///usr/share/backgrounds/user/default.png'
 
+[org/cinnamon/desktop/background/slideshow]
+delay=15
+image-source='directory:///usr/share/backgrounds/user'
+
 [org/cinnamon/desktop/interface]
 clock-show-date=false
 clock-show-seconds=false
@@ -392,7 +396,6 @@ sort-column='name'
 sort-directories-first=false
 sort-order='ascending'
 type-format='category'
-window-size=(1203, 902)
 
 [org/nemo/desktop]
 desktop-layout='false::false'

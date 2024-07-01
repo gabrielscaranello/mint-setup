@@ -27,16 +27,40 @@
     },
     "value": "show_desklets"
   },
+  "shift-click-action": {
+    "type": "combobox",
+    "description": "Shift + click action",
+    "default": "show_expo",
+    "options": {
+      "Show the desktop": "show_desktop",
+      "Show the desklets": "show_desklets",
+      "Show the workspace selector (Expo)": "show_expo",
+      "Show the window selector (Scale)": "show_scale"
+    },
+    "value": "show_expo"
+  },
+  "shift-middle-click-action": {
+    "type": "combobox",
+    "description": "Shift + middle click action",
+    "default": "show_scale",
+    "options": {
+      "Show the desktop": "show_desktop",
+      "Show the desklets": "show_desklets",
+      "Show the workspace selector (Expo)": "show_expo",
+      "Show the window selector (Scale)": "show_scale"
+    },
+    "value": "show_scale"
+  },
   "scroll-behavior": {
     "type": "combobox",
-    "default": "none",
+    "default": "nothing",
     "description": "Scroll wheel behavior",
     "options": {
       "Nothing": "nothing",
       "Switch workspaces": "normal",
       "Switch workspaces (reversed)": "reversed"
     },
-    "value": "none"
+    "value": "nothing"
   },
   "peek-at-desktop": {
     "type": "switch",
@@ -78,5 +102,5 @@
     "tooltip": "Change the opacity of windows when peeking at the desktop",
     "value": 5
   },
-  "__md5__": "2a3b4c4bb5c6859baf3469c66fad8322"
+  "__md5__": "f1541bf6a3322808faf6a0cf0a6f39a0"
 }
