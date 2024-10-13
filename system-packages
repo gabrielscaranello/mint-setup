@@ -21,7 +21,6 @@ g++
 gcc
 gdu
 gettext
-gimp
 git
 golang
 jq
@@ -29,11 +28,9 @@ kitty
 libsass1
 libu2f-udev
 luarocks
-mercurial
 nemo-fileroller
 ninja-build
 numlockx
-onlyoffice-desktopeditors
 papirus-folders
 papirus-icon-theme
 piper

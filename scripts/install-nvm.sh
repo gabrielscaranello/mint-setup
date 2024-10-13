@@ -1,7 +1,7 @@
 #! /bin/bash
 
 NODE_VERSION=20
-NVM_VERSION=0.39.7
+NVM_VERSION=0.40.1
 PACKAGES=$(cat "$PWD/node-packages" | tr '\n' ' ')
 
 echo "Installing NVM and Node..."
