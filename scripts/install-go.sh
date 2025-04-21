@@ -1,6 +1,6 @@
 #! /bin/bash
 
-VERSION=1.23.2
+VERSION=1.24.2
 FILENAME=go${VERSION}.linux-amd64.tar.gz
 DOWNLOAD_URL=https://go.dev/dl/${FILENAME}
 DOWNLOAD_FILE=/tmp/${FILENAME}
