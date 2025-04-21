@@ -1,6 +1,6 @@
 #! /bin/bash
 
-APPLETS=("color-picker@fmete" "qredshift@quintao")
+APPLETS=("color-picker@fmete")
 EXTENSIONS=("transparent-panels-reloaded@marcelovbcfilho")
 
 DOWNLOAD_URL="https://cinnamon-spices.linuxmint.com/files"
