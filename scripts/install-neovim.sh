@@ -16,6 +16,6 @@ git clone --depth 1 -b "$BRANCH" "$GIT_URL" "$WORK_DIR"
 echo "Installing..."
 cd "$WORK_DIR"
 make CMAKE_BUILD_TYPE=RelWithDebInfo
-cd build && cpack -G DEB && sudo dpkg -i nvim-linux64.deb && cd "$WORK_DIR"
+cd build && cpack -G DEB && sudo dpkg -i nvim-linux-x86_64.deb && cd "$WORK_DIR"
 
 echo "Neovim installed..."
