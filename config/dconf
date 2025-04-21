@@ -1,7 +1,14 @@
 [com/linuxmint/updates]
+autorefresh-hours=2
 default-repo-is-ok=true
 hide-kernel-update-warning=true
+hide-systray=true
+hide-window-after-update=true
+refresh-minutes=10
 show-welcome-page=false
+tracker-grace-period=30
+tracker-max-age=15
+tracker-max-days=7
 window-height=570
 window-pane-position=344
 window-width=790
@@ -21,7 +28,7 @@ enabled-applets=['panel1:left:0:menu@cinnamon.org:0', 'panel1:right:7:systray@ci
 enabled-desklets=@as []
 enabled-extensions=@as []
 favorite-apps=['cinnamon-settings.desktop', 'mintinstall.desktop']
-hotcorner-layout=['expo:true:0', 'scale:false:0', 'scale:true:0', 'desktop:false:0']
+hotcorner-layout=['expo:true:0', 'scale:false:0', 'scale:true:500', 'desktop:false:0']
 next-applet-id=22
 next-desklet-id=3
 no-adjacent-panel-barriers=false
@@ -49,6 +56,8 @@ mousekeys-accel-time=300
 mousekeys-init-delay=300
 mousekeys-max-speed=10
 slowkeys-delay=300
+togglekeys-enable-beep=false
+togglekeys-enable-osd=false
 
 [org/cinnamon/desktop/a11y/mouse]
 dwell-threshold=10
@@ -63,11 +72,10 @@ exec='kitty'
 exec-arg='--'
 
 [org/cinnamon/desktop/background]
-picture-uri='file:///usr/share/backgrounds/user/default.png'
+picture-options='zoom'
 
 [org/cinnamon/desktop/background/slideshow]
 delay=15
-image-source='directory:///usr/share/backgrounds/user'
 
 [org/cinnamon/desktop/interface]
 clock-show-date=false
@@ -365,7 +373,7 @@ group-per-window=false
 load-extra-items=false
 
 [org/gnome/libgnomekbd/keyboard]
-layouts=['us\tintl', 'br']
+layouts=['us\tintl']
 
 [org/gnome/nm-applet]
 disable-connected-notifications=true
@@ -380,6 +388,10 @@ ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
 [org/gnome/nm-applet/eap/188a180d-5019-39b8-b941-7b2167dc87c6]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
+[org/gnome/nm-applet/eap/c320dff9-96ed-3783-ae36-4a6ce391c06c]
 ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 

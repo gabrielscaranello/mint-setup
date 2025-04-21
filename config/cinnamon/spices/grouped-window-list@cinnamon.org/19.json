@@ -1,41 +1,26 @@
 {
   "layout": {
     "type": "layout",
-    "pages": [
-      "generalPage",
-      "panelPage",
-      "thumbnailsPage",
-      "contextMenuPage"
-    ],
+    "pages": ["generalPage", "panelPage", "thumbnailsPage", "contextMenuPage"],
     "generalPage": {
       "type": "page",
       "title": "General",
-      "sections": [
-        "generalSection",
-        "hotKeysSection"
-      ]
+      "sections": ["generalSection", "hotKeysSection"]
     },
     "panelPage": {
       "type": "page",
       "title": "Panel",
-      "sections": [
-        "appButtonsSection"
-      ]
+      "sections": ["appButtonsSection"]
     },
     "thumbnailsPage": {
       "type": "page",
       "title": "Thumbnails",
-      "sections": [
-        "thumbnailsSection",
-        "hoverPeekSection"
-      ]
+      "sections": ["thumbnailsSection", "hoverPeekSection"]
     },
     "contextMenuPage": {
       "type": "page",
       "title": "Context Menu",
-      "sections": [
-        "contextMenuSection"
-      ]
+      "sections": ["contextMenuSection"]
     },
     "generalSection": {
       "type": "section",
@@ -45,18 +30,8 @@
         "scroll-behavior",
         "left-click-action",
         "middle-click-action",
-        "show-all-workspaces"
-      ]
-    },
-    "appButtonsSection": {
-      "type": "section",
-      "title": "Application Buttons",
-      "keys": [
-        "title-display",
-        "launcher-animation-effect",
-        "number-display",
-        "pinned-apps",
-        "enable-app-button-dragging"
+        "show-all-workspaces",
+        "window-display-settings"
       ]
     },
     "hotKeysSection": {
@@ -67,6 +42,16 @@
         "show-apps-order-hotkey",
         "show-apps-order-timeout",
         "super-num-hotkeys"
+      ]
+    },
+    "appButtonsSection": {
+      "type": "section",
+      "title": "Application Buttons",
+      "keys": [
+        "title-display",
+        "launcher-animation-effect",
+        "number-display",
+        "enable-app-button-dragging"
       ]
     },
     "thumbnailsSection": {
@@ -97,30 +82,14 @@
     "contextMenuSection": {
       "type": "section",
       "title": "",
-      "keys": [
-        "show-recent",
-        "autostart-menu-item",
-        "monitor-move-all-windows"
-      ]
+      "keys": ["show-recent", "autostart-menu-item", "monitor-move-all-windows"]
     }
   },
-  "number-display": {
+  "group-apps": {
     "type": "checkbox",
     "default": true,
-    "description": "Show window count numbers",
+    "description": "Group windows by application",
     "value": true
-  },
-  "title-display": {
-    "type": "combobox",
-    "default": 1,
-    "description": "Button label",
-    "options": {
-      "None": 1,
-      "Application name": 2,
-      "Window title": 3,
-      "Window title (only for the focused window)": 4
-    },
-    "value": 1
   },
   "scroll-behavior": {
     "type": "combobox",
@@ -155,55 +124,21 @@
     },
     "value": 3
   },
-  "pinned-apps": {
-    "type": "generic",
-    "default": [
-      "nemo.desktop",
-      "firefox.desktop",
-      "org.gnome.Terminal.desktop"
-    ],
-    "value": [
-      "kitty.desktop",
-      "nemo.desktop",
-      "code.desktop",
-      "firefox.desktop",
-      "google-chrome.desktop",
-      "onlyoffice-desktopeditors.desktop",
-      "dbeaver-ce.desktop",
-      "gimp.desktop",
-      "discord.desktop",
-      "steam.desktop",
-      "org.telegram.desktop._f3fe17d408312a022c11c6c9d7a1beb8.desktop"
-    ]
-  },
-  "group-apps": {
-    "type": "checkbox",
-    "default": true,
-    "description": "Group windows by application",
-    "value": true
-  },
   "show-all-workspaces": {
     "type": "checkbox",
     "default": false,
     "description": "Show windows from all workspaces",
     "value": true
   },
-  "enable-app-button-dragging": {
-    "type": "checkbox",
-    "default": true,
-    "description": "Enable app button dragging",
-    "value": true
-  },
-  "launcher-animation-effect": {
+  "window-display-settings": {
     "type": "combobox",
-    "default": 3,
-    "description": "Launcher animation",
+    "default": 1,
+    "description": "Show windows from other monitors",
     "options": {
-      "None": 1,
-      "Fade": 2,
-      "Scale": 3
+      "Only from monitors without a window list": 1,
+      "From all monitors": 2
     },
-    "value": 3
+    "value": 1
   },
   "cycleMenusHotkey": {
     "type": "keybinding",
@@ -233,29 +168,40 @@
     "description": "Enable Super+<number> shortcut to switch/open apps",
     "value": true
   },
-  "thumbnail-timeout": {
-    "dependency": "!onclick-thumbnails",
+  "title-display": {
     "type": "combobox",
-    "default": 250,
-    "description": "Delay before showing thumbnails",
+    "default": 1,
+    "description": "Button label",
     "options": {
-      "50 ms": 50,
-      "250 ms": 250,
-      "500 ms": 500
+      "None": 1,
+      "Application name": 2,
+      "Window title": 3,
+      "Window title (only for the focused window)": 4
     },
-    "value": 250
+    "value": 1
   },
-  "thumbnail-size": {
+  "launcher-animation-effect": {
     "type": "combobox",
-    "default": 6,
-    "description": "Thumbnail size",
+    "default": 3,
+    "description": "Launcher animation",
     "options": {
-      "Small": 3,
-      "Medium": 6,
-      "Large": 9,
-      "Largest": 12
+      "None": 1,
+      "Fade": 2,
+      "Scale": 3
     },
-    "value": 6
+    "value": 3
+  },
+  "number-display": {
+    "type": "checkbox",
+    "default": true,
+    "description": "Show window count numbers",
+    "value": true
+  },
+  "enable-app-button-dragging": {
+    "type": "checkbox",
+    "default": true,
+    "description": "Enable app button dragging",
+    "value": true
   },
   "thumbnail-scroll-behavior": {
     "type": "checkbox",
@@ -299,24 +245,29 @@
     "description": "Click to show thumbnails",
     "value": false
   },
-  "show-recent": {
-    "type": "checkbox",
-    "default": true,
-    "description": "Show recent items",
-    "value": true
+  "thumbnail-timeout": {
+    "dependency": "!onclick-thumbnails",
+    "type": "combobox",
+    "default": 250,
+    "description": "Delay before showing thumbnails",
+    "options": {
+      "50 ms": 50,
+      "250 ms": 250,
+      "500 ms": 500
+    },
+    "value": 250
   },
-  "autostart-menu-item": {
-    "type": "checkbox",
-    "default": false,
-    "description": "Show autostart option",
-    "value": true
-  },
-  "monitor-move-all-windows": {
-    "type": "checkbox",
-    "default": true,
-    "description": "Apply the monitor move option to all windows",
-    "tooltip": "When clicking \"Move to monitor\" in the context menu, this option will move all of an app's windows instead of just the last focused window from the app.",
-    "value": true
+  "thumbnail-size": {
+    "type": "combobox",
+    "default": 6,
+    "description": "Thumbnail size",
+    "options": {
+      "Small": 3,
+      "Medium": 6,
+      "Large": 9,
+      "Largest": 12
+    },
+    "value": 6
   },
   "enable-hover-peek": {
     "type": "checkbox",
@@ -360,5 +311,47 @@
     "description": "Window opacity",
     "value": 100
   },
-  "__md5__": "6f73ea938aeb5481595a809eb6cbe8e3"
+  "show-recent": {
+    "type": "checkbox",
+    "default": true,
+    "description": "Show recent items",
+    "value": true
+  },
+  "autostart-menu-item": {
+    "type": "checkbox",
+    "default": false,
+    "description": "Show autostart option",
+    "value": true
+  },
+  "monitor-move-all-windows": {
+    "type": "checkbox",
+    "default": true,
+    "description": "Apply the monitor move option to all windows",
+    "tooltip": "When clicking \"Move to monitor\" in the context menu, this option will move all of an app's windows instead of just the last focused window from the app.",
+    "value": true
+  },
+  "pinned-apps": {
+    "type": "generic",
+    "default": [
+      "nemo.desktop",
+      "firefox.desktop",
+      "org.gnome.Terminal.desktop"
+    ],
+    "value": [
+      "kitty.desktop",
+      "nemo.desktop",
+      "code.desktop",
+      "firefox.desktop",
+      "google-chrome.desktop",
+      "io.dbeaver.DBeaverCommunity.desktop:flatpak",
+      "md.obsidian.Obsidian.desktop:flatpak",
+      "org.onlyoffice.desktopeditors.desktop:flatpak",
+      "io.github.alainm23.planify.desktop:flatpak",
+      "com.spotify.Client.desktop:flatpak",
+      "com.discordapp.Discord.desktop:flatpak",
+      "org.telegram.desktop._f3fe17d408312a022c11c6c9d7a1beb8.desktop"
+    ]
+  },
+  "__md5__": "b7d0a7558cf87c22c50195c9d408485f"
 }
+
