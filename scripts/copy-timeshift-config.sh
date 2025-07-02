@@ -11,7 +11,7 @@ echo "Removing old files if exists..."
 sudo rm -rf $TIMESHIFT_CONFIG
 
 if [ -f "$USERS_DIR" ]; then
-	DOCUMENTS_DIR="$(grep 'XDG_DOCUMENTS_DIR' "$USERS_DIR" | awk -F'/' '{print $NF}' | cut -d'"' -f1)"
+  DOCUMENTS_DIR="$(grep 'XDG_DOCUMENTS_DIR' "$USERS_DIR" | awk -F'/' '{print $NF}' | cut -d'"' -f1)"
 fi
 
 echo "Creating timeshift config..."

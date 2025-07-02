@@ -1,25 +1,26 @@
 #! /bin/bash
 
-SIZE=$(cat </proc/meminfo | awk '/MemTotal/ { printf("%.0f", ($2 / 1024 / 1024 / 2)) }')
-
 echo "Setting up swap..."
 
-echo "Removing existing swap..."
-sudo swapoff --all
-sudo zramswap stop
-sudo sed -i '/^PERCENT/d' /etc/default/zramswap
-sudo sed -i '/^PRIORITY/d' /etc/default/zramswap
+# get the total memory in MB
+total_mem_kb=$(grep MemTotal /proc/meminfo | awk '{print $2}')
+total_mem_mb=$((total_mem_kb / 1024))
 
-echo "Creating zramswap config..."
-echo 'PERCENT=50' | sudo tee -a /etc/default/zramswap
-echo 'PRIORITY=100' | sudo tee -a /etc/default/zramswap
+# calculate zram size as half of total memory, capped at 8192 MB
+zram_size=$((total_mem_mb / 2))
+if [ "$zram_size" -gt 8192 ]; then
+  zram_size=8192
+fi
+
+echo "Removing existing swap..."
+sudo rm -rf /etc/sysctl.d/00-custom.conf
+
+echo "Configire ZRAM"
+sudo sed -i "s/^#\?SIZE=.*/SIZE=${zram_size}/" /etc/default/zramswap
 
 echo "Configuring swappiness and vfs_cache_pressure..."
-sudo rm -rf /etc/sysctl.d/00-custom.conf
-echo 'vm.swappiness=10' | sudo tee -a /etc/sysctl.d/00-custom.conf
-echo 'vm.vfs_cache_pressure=50' | sudo tee -a /etc/sysctl.d/00-custom.conf
-
-echo "Starting zramswap..."
-sudo zramswap start
+echo 'vm.swappiness=10' | sudo tee -a /etc/sysctl.d/00-custom.conf >/dev/null
+echo 'vm.vfs_cache_pressure=50' | sudo tee -a /etc/sysctl.d/00-custom.conf >/dev/null
+sudo systemctl restart zramswap
 
 echo "Swap configured."

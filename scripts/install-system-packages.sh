@@ -1,9 +1,10 @@
 #! /bin/bash
 
 PWD=$(pwd)
-PACKAGES=$(cat "$PWD/system-packages" | tr '\n' ' ')
+PACKAGES=$(tr '\n' ' ' <"${PWD}/system-packages")
 
 echo "Installing native packages..."
+sudo apt update
 sudo apt upgrade -y
-sudo apt install -y $PACKAGES
-echo "native packages installed."
+echo "$PACKAGES" | xargs sudo apt install -y
+echo "Native packages installed."

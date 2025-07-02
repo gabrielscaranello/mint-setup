@@ -1,8 +1,8 @@
 #! /bin/bash
 
 NODE_VERSION=22
-NVM_VERSION=0.40.2
-PACKAGES=$(cat "$PWD/node-packages" | tr '\n' ' ')
+NVM_VERSION=0.40.3
+NPM_PACKAGES=$(tr '\n' ' ' <"$PWD/npm-packages")
 
 echo "Installing NVM and Node..."
 
@@ -15,10 +15,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 echo "Installing Node ${NODE_VERSION}..."
 nvm install "${NODE_VERSION}"
 
-echo "Installing yarn..."
-npm i -g yarn
-
-echo "Installing node packages..."
-yarn global add $PACKAGES
+echo "Installing packages..."
+echo "$NPM_PACKAGES" | xargs npm i -g
 
 echo "NVM and Node installed."

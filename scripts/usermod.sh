@@ -2,6 +2,6 @@
 
 echo "Starting usermod"
 
-sudo usermod -aG docker $USER
+sudo usermod -aG docker "$USER"
 
 echo "Services enabled."

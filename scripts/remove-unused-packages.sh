@@ -1,10 +1,11 @@
 #! /bin/bash
 
+
 PWD=$(pwd)
-PACKAGES=$(cat "$PWD/unused-packages" | tr '\n' ' ')
+PACKAGES=$(tr '\n' ' ' <"${PWD}/unused-packages")
 
 echo "Removing unused packages..."
 sudo apt update
-sudo apt purge -y $PACKAGES
-sudo apt autoremove
+echo "$PACKAGES" | xargs sudo apt purge -y
+sudo apt autoremove --purge -y
 echo "Unused packages removed."
