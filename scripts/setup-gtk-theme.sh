@@ -25,6 +25,5 @@ echo "Defining GTK Theme..."
 gsettings set org.cinnamon.desktop.interface gtk-theme "Colloid-Dark-Catppuccin"
 gsettings set org.cinnamon.desktop.wm.preferences theme "Colloid-Dark-Catppuccin"
 gsettings set org.cinnamon.theme name "Colloid-Dark-Catppuccin"
-gsettings set org.cinnamon.desktop.interface color-scheme 'prefer-dark'
 
 echo "GTK Theme setup done."
