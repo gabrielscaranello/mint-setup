@@ -23,7 +23,7 @@ bash "${PWD}/scripts/install-neovim.sh"
 bash "${PWD}/scripts/install-telegram.sh"
 
 bash "${PWD}/scripts/install-cinnamon-spices.sh"
-bash "${PWD}/scripts/copy-desktop-config.sh"
+# bash "${PWD}/scripts/copy-desktop-config.sh"
 bash "${PWD}/scripts/copy-timeshift-config.sh"
 bash "${PWD}/scripts/setup-look.sh"
 bash "${PWD}/scripts/setup-swap.sh"
