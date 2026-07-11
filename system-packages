@@ -38,6 +38,7 @@ python3-virtualenv
 ripgrep
 sassc
 sqlite3
+telegram-desktop
 tidy
 ttf-mscorefonts-installer
 unzip

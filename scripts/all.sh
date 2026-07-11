@@ -20,7 +20,6 @@ bash "${PWD}/scripts/install-jetbrains-mono.sh"
 bash "${PWD}/scripts/install-lazydocker.sh"
 bash "${PWD}/scripts/install-lazygit.sh"
 bash "${PWD}/scripts/install-neovim.sh"
-bash "${PWD}/scripts/install-telegram.sh"
 
 bash "${PWD}/scripts/install-cinnamon-spices.sh"
 # bash "${PWD}/scripts/copy-desktop-config.sh"
