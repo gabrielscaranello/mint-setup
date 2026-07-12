@@ -1,0 +1,8 @@
+firmware-amd-graphics
+libegl-mesa0
+libgbm1
+libgl1-mesa-dri
+libglx-mesa0
+linux-image-amd64
+mesa-va-drivers
+mesa-vulkan-drivers
