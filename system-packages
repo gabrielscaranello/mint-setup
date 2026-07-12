@@ -1,6 +1,7 @@
 bat
 btop
 build-essential
+clang
 cmake
 code
 curl
